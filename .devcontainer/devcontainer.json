@@ -1,6 +1,6 @@
 {
     "name": "nfcore",
-    "image": "nfcore/gitpod:latest",
+    "image": "nfcore/gitpod:2.14.1",
     "remoteUser": "gitpod",
     "runArgs": ["--privileged"],
 
@@ -16,5 +16,16 @@
             // Add the IDs of extensions you want installed when the container is created.
             "extensions": ["ms-python.python", "ms-python.vscode-pylance", "nf-core.nf-core-extensionpack"]
         }
-    }
+    },
+    "containerEnv": {
+        "HTTP_PROXY": "${localEnv:HTTP_PROXY}",
+        "HTTPS_PROXY": "${localEnv:HTTP_PROXY}",
+        "http_proxy": "${localEnv:HTTP_PROXY}",
+        "https_proxy": "${localEnv:HTTP_PROXY}"
+    },
+    "mounts": [
+		// Mount in forwarding of ssh keys
+		"source=${localEnv:SSH_AUTH_SOCK},target=${localEnv:SSH_AUTH_SOCK},type=bind",
+		"source=/data/test/57/raredisease_test/,target=/data/,type=bind,consistency=cached"
+	]
 }
