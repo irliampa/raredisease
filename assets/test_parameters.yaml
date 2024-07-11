@@ -1,0 +1,43 @@
+# Reference files
+genome                     : "GRCh37"
+igenomes_ignore            : true
+fasta                      :
+fai                        :
+sequence_dictionary        :
+bwa                        :
+intervals_wgs              :
+intervals_y                :
+known_dbsnp                :
+known_dbsnp_tbi            :
+mito_name                  : "MT"
+target_bed                 :
+
+# Skipped analyses
+skip_gens                  : true
+skip_germlinecnvcaller     : true
+skip_eklipse               : true
+skip_me_calling            : true
+skip_me_annotation         : true
+skip_mt_annotation         : true
+skip_mt_subsample          : true
+skip_snv_annotation        : true
+skip_sv_annotation         : true
+skip_vcf2cytosure          : true
+skip_vep_filter            : true
+
+# Analysis options
+analysis_type              : "wes"
+platform                   : "illumina"  #default
+ngsbits_samplegender_method: "xy" #default
+run_mt_for_wes             : false
+run_rtgvcfeval             : false
+save_mapped_as_cram        : true
+
+# Alignement options
+aligner                    :
+min_trimmed_length         :
+rmdup                      : true
+
+# Variant Calling options
+variant_caller             : "deepvariant" #default
+variant_type               : "snp,indel"   #default
