@@ -1,16 +1,20 @@
 # Reference files
 genome                     : "GRCh37"
 igenomes_ignore            : true
-fasta                      :
-fai                        :
-sequence_dictionary        :
-bwa                        :
-intervals_wgs              :
-intervals_y                :
-known_dbsnp                :
-known_dbsnp_tbi            :
+fasta                      : "/persistent/diagnostic/reference/g1k_v37/human_g1k_v37.fasta"
+fai                        : "/persistent/diagnostic/reference/g1k_v37/human_g1k_v37.fasta.fai"
+sequence_dictionary        : "/persistent/diagnostic/reference/g1k_v37/human_g1k_v37.dict"
+bwa                        : "/persistent/diagnostic/reference/g1k_v37/"
+# if sentieon bwa needs a licence to be run, switch to bwamem2 and verify available index files in ref
+# in that case use params.bwamem2 for the respective directory, instead of params.bwa
+# intervals_wgs              :    #probably for analysis_type="wgs"
+# intervals_y                :    #probably for analysis_type="wgs"
+known_dbsnp                : "/persistent/diagnostic/reference/g1k_v37/dbsnp_138.b37.vcf"
+# TODO: create the TBI for the dbsnp_138.b37, available index type IDX
+known_dbsnp_tbi            : "/persistent/diagnostic/reference/g1k_v37/dbsnp_138.b37.vcf.tbi"
 mito_name                  : "MT"
-target_bed                 :
+bait_padding               : 100           #default
+target_bed                 : "/persistent/diagnostic/reference/g1k_v37/kapa-hyper-hp19-capture-targets.bed"
 
 # Skipped analyses
 skip_gens                  : true
@@ -27,15 +31,17 @@ skip_vep_filter            : true
 
 # Analysis options
 analysis_type              : "wes"
-platform                   : "illumina"  #default
-ngsbits_samplegender_method: "xy" #default
+platform                   : "illumina"    #default
+ngsbits_samplegender_method: "xy"          #default
 run_mt_for_wes             : false
 run_rtgvcfeval             : false
 save_mapped_as_cram        : true
 
 # Alignement options
-aligner                    :
-min_trimmed_length         :
+aligner                    : "sentieon"
+# if sentieon bwa needs a licence to be implemented, then switch to params.aligner: "bwamem2"
+# after setting up the params.bwamem2 directory for the index files (see above)
+min_trimmed_length         : 36            #taken from 57-trimmomatic, default=40
 rmdup                      : true
 
 # Variant Calling options
