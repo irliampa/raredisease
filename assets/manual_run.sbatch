@@ -9,16 +9,10 @@
 #SBATCH --priority=1 
 
 # --- Input ---
-# 
-RUN_FOLDER="/data/test/57/raredisease_test/test_data/240318_A01268_0362_BH3K3HDRX5/"
-# REF_GENOME="/data/reference/IGSR/genome/HumanG1Kv37/human_g1k_v37.fasta"
-# DBSNP_DB="/data/test/574/input/dbsnp/dbsnp_138.b37.vcf.gz"
-# INPUT_LIST="${RUN_FOLDER}/test_run1_blacklist.csv"
-# INPUT_DIR=/data/test/57/input/
-
+INPUT_SAMPLESHEET="/persistent/Eirini_Data_transfer/test_full_data/ref_input/raredisease_test_samplesheet.csv"
 
 # --- Output ---
-OUTPUT_FOLDER="/data/test/57/raredisease_test/output_240318_A01268_0362_BH3K3HDRX5"
+OUTPUT_FOLDER="/data/test/57/raredisease_test/output_040424_A00001_0002_VFDB1BGVCF"
 # RESULT_FOLDER=${RUN_ROOT}/results
 
 
@@ -33,8 +27,9 @@ RUN_ROOT=${SCRATCH_ROOT}/${SLURM_JOB_ID}
 
 # --- Command ---
 docker run --rm \
-    -v /data/test/574/:/data/test/574/ \
-    -v /data/reference/:/data/reference/:ro \
+    -v /data/test/57/:/data/test/57/ \
+    -v /persistent/diagnostic/reference/g1k_v37/:/persistent/diagnostic/reference/g1k_v37/:ro \
+    -v /persistent/Eirini_Data_transfer/test_full_data/040424_A00001_0002_VFDB1BGVCF/:/persistent/Eirini_Data_transfer/test_full_data/040424_A00001_0002_VFDB1BGVCF/:ro \
     -v /etc/slurm-llnl/:/etc/slurm-llnl/:ro \
     -v /etc/munge/:/etc/munge/:ro \
     -v /run/munge/:/run/munge/:ro \
@@ -46,10 +41,9 @@ docker run --rm \
     --network host $PIPELINE_IMAGE \
     nextflow run ${PIPELINE_URL} \
     -profile test,singularity \
-    #docker \
     -process.executor=slurm \
     -process.queue='low' \
     -r ${PIPELINE_REVISION} \
     --outdir ${OUTPUT_FOLDER} \
-    --input ${INPUT_LIST} \
+    --input ${INPUT_INPUT_SAMPLESHEETT} \
     -params.file ${PIPELINE_URL}/assets/test_parameters.yaml

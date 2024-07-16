@@ -4,11 +4,11 @@ igenomes_ignore            : true
 fasta                      : "/persistent/diagnostic/reference/g1k_v37/human_g1k_v37.fasta"
 fai                        : "/persistent/diagnostic/reference/g1k_v37/human_g1k_v37.fasta.fai"
 sequence_dictionary        : "/persistent/diagnostic/reference/g1k_v37/human_g1k_v37.dict"
-bwa                        : "/persistent/diagnostic/reference/g1k_v37/"
-# if sentieon bwa needs a licence to be run, switch to bwamem2 and verify available index files in ref
-# in that case use params.bwamem2 for the respective directory, instead of params.bwa
-# intervals_wgs              :    #probably for analysis_type="wgs"
-# intervals_y                :    #probably for analysis_type="wgs"
+# bwamem2                    : "/persistent/diagnostic/reference/g1k_v37/"
+# if bwamem2 index directory is not provided, the index files will be automatically created from
+# the input reference genome
+intervals_wgs              : "/persistent/Eirini_Data_transfer/test_full_data/ref_input/human_g1k_v37.interval_list"
+intervals_y                : "/persistent/Eirini_Data_transfer/test_full_data/ref_input/human_g1k_v37_Y.interval_list"
 known_dbsnp                : "/persistent/diagnostic/reference/g1k_v37/dbsnp_138.b37.vcf"
 # TODO: create the TBI for the dbsnp_138.b37, available index type IDX
 known_dbsnp_tbi            : "/persistent/diagnostic/reference/g1k_v37/dbsnp_138.b37.vcf.tbi"
@@ -38,7 +38,7 @@ run_rtgvcfeval             : false
 save_mapped_as_cram        : true
 
 # Alignement options
-aligner                    : "sentieon"
+aligner                    : "bwamem2"
 # if sentieon bwa needs a licence to be implemented, then switch to params.aligner: "bwamem2"
 # after setting up the params.bwamem2 directory for the index files (see above)
 min_trimmed_length         : 36            #taken from 57-trimmomatic, default=40
