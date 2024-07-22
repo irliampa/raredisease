@@ -10,6 +10,7 @@
 
 # --- Input ---
 INPUT_SAMPLESHEET="/persistent/Eirini_Data_transfer/test_full_data/ref_input/raredisease_test_samplesheet.csv"
+PARAMS_FILE="/persistent/Eirini_Data_transfer/test_full_data/ref_input/test_parameters.yaml"
 
 # --- Output ---
 OUTPUT_FOLDER="/persistent/Eirini_Data_transfer/test_full_data/output_040424_A00001_0002_VFDB1BGVCF"
@@ -45,4 +46,4 @@ docker run --rm \
     -r ${PIPELINE_REVISION} \
     --outdir ${OUTPUT_FOLDER} \
     --input ${INPUT_INPUT_SAMPLESHEETT} \
-    -params.file ${PIPELINE_URL}/assets/test_parameters.yaml
+    -params.file ${PARAMS_FILE}
