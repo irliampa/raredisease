@@ -1,14 +1,14 @@
 # Reference files
 genome                     : "GRCh37"
 igenomes_ignore            : true
-fasta                      : "/persistent/diagnostic/reference/g1k_v37/human_g1k_v37.fasta"
-fai                        : "/persistent/diagnostic/reference/g1k_v37/human_g1k_v37.fasta.fai"
-sequence_dictionary        : "/persistent/diagnostic/reference/g1k_v37/human_g1k_v37.dict"
+fasta                      : "/data/test/574/ref_files_to_compare/HumanG1Kv37/human_g1k_v37.fasta"
+fai                        : "/data/test/574/ref_files_to_compare/HumanG1Kv37/human_g1k_v37.fasta.fai"
+sequence_dictionary        : "/data/test/574/ref_files_to_compare/HumanG1Kv37/human_g1k_v37.dict"
 # bwamem2                    : "/persistent/diagnostic/reference/g1k_v37/"
 # if bwamem2 index directory is not provided, the index files will be automatically created from
 # the input reference genome
-intervals_wgs              : "/persistent/Eirini_Data_transfer/test_full_data/ref_input/human_g1k_v37.interval_list"
-intervals_y                : "/persistent/Eirini_Data_transfer/test_full_data/ref_input/human_g1k_v37_Y.interval_list"
+intervals_wgs              : "/data/test/574/ref_files_to_compare/HumanG1Kv37/human_g1k_v37.interval_list"
+intervals_y                : "/data/test/574/ref_files_to_compare/HumanG1Kv37/human_g1k_v37_Y.interval_list"
 known_dbsnp                : "/data/test/574/input/dbsnp/dbsnp_138.b37.vcf.gz"
 # TODO: create the TBI for the dbsnp_138.b37, available index type IDX
 known_dbsnp_tbi            : "/data/test/574/input/dbsnp/dbsnp_138.b37.vcf.gz.tbi"

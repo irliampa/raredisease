@@ -29,6 +29,7 @@ RUN_ROOT=${SCRATCH_ROOT}/${SLURM_JOB_ID}
 # --- Command ---
 docker run --rm \
     -v /data/test/574/input/dbsnp/:/data/test/574/input/dbsnp/ \
+    -v /data/test/574/ref_files_to_compare/HumanG1Kv37:/data/test/574/ref_files_to_compare/HumanG1Kv37/ \
     -v /persistent/diagnostic/reference/g1k_v37/:/persistent/diagnostic/reference/g1k_v37/:ro \
     -v /persistent/Eirini_Data_transfer/test_full_data/:/persistent/Eirini_Data_transfer/test_full_data/ \
     -v /etc/slurm-llnl/:/etc/slurm-llnl/:ro \
