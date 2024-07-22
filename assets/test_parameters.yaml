@@ -15,7 +15,7 @@ known_dbsnp_tbi            : "/data/test/574/input/dbsnp/dbsnp_138.b37.vcf.gz.tb
 mito_name                  : "MT"
 bait_padding               : 100           #default
 target_bed                 : "/persistent/diagnostic/reference/g1k_v37/kapa-hyper-hp19-capture-targets.bed"
-variant_catalog          : "/persistent/Eirini_Data_transfer/test_full_data/ref_input/variant_catalogue_grch37.json"
+variant_catalog            : "/persistent/Eirini_Data_transfer/test_full_data/ref_input/variant_catalogue_grch37.json"
 
 # Skipped analyses
 skip_gens                  : true
