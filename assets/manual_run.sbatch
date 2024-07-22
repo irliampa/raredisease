@@ -22,7 +22,7 @@ OUTPUT_FOLDER="/persistent/Eirini_Data_transfer/test_full_data/output_040424_A00
 PIPELINE_IMAGE=registry.mgmlab.net/docker-images/nextflow-slurm:v3.1.1
 PIPELINE_URL=https://github.com/irliampa/raredisease.git
 PIPELINE_REVISION="setting_up_dev"
-SCRATCH_ROOT=/scratch/$(basename $PIPELINE_URL)
+SCRATCH_ROOT=/scratch/raredisease
 RUN_ROOT=${SCRATCH_ROOT}/${SLURM_JOB_ID}
 
 
