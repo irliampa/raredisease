@@ -39,7 +39,7 @@ docker run --rm \
     -w ${RUN_ROOT} \
     --network host $PIPELINE_IMAGE \
     nextflow run ${PIPELINE_URL} \
-    -profile test,singularity \
+    -profile test,docker \
     -process.executor=slurm \
     -process.queue='low' \
     -r ${PIPELINE_REVISION} \
