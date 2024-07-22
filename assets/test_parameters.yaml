@@ -39,9 +39,8 @@ save_mapped_as_cram        : true
 
 # Alignement options
 aligner                    : "bwamem2"
-# if sentieon bwa needs a licence to be implemented, then switch to params.aligner: "bwamem2"
-# after setting up the params.bwamem2 directory for the index files (see above)
-min_trimmed_length         : 36            #taken from 57-trimmomatic, default=40
+# sentieon bwa needs a licence to be implemed
+min_trimmed_length         : 36            #taken from 57-trimmomatic, defaul0
 rmdup                      : true
 
 # Variant Calling options

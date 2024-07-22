@@ -12,7 +12,7 @@
 INPUT_SAMPLESHEET="/persistent/Eirini_Data_transfer/test_full_data/ref_input/raredisease_test_samplesheet.csv"
 
 # --- Output ---
-OUTPUT_FOLDER="/data/test/57/raredisease_test/output_040424_A00001_0002_VFDB1BGVCF"
+OUTPUT_FOLDER="/persistent/Eirini_Data_transfer/test_full_data/output_040424_A00001_0002_VFDB1BGVCF"
 # RESULT_FOLDER=${RUN_ROOT}/results
 
 
@@ -27,9 +27,8 @@ RUN_ROOT=${SCRATCH_ROOT}/${SLURM_JOB_ID}
 
 # --- Command ---
 docker run --rm \
-    -v /data/test/57/:/data/test/57/ \
     -v /persistent/diagnostic/reference/g1k_v37/:/persistent/diagnostic/reference/g1k_v37/:ro \
-    -v /persistent/Eirini_Data_transfer/test_full_data/040424_A00001_0002_VFDB1BGVCF/:/persistent/Eirini_Data_transfer/test_full_data/040424_A00001_0002_VFDB1BGVCF/:ro \
+    -v /persistent/Eirini_Data_transfer/test_full_data/:/persistent/Eirini_Data_transfer/test_full_data/ \
     -v /etc/slurm-llnl/:/etc/slurm-llnl/:ro \
     -v /etc/munge/:/etc/munge/:ro \
     -v /run/munge/:/run/munge/:ro \
