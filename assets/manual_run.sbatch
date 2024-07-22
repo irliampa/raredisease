@@ -46,4 +46,4 @@ docker run --rm \
     -r ${PIPELINE_REVISION} \
     --outdir ${OUTPUT_FOLDER} \
     --input ${INPUT_INPUT_SAMPLESHEETT} \
-    -params.file ${PARAMS_FILE}
+    -param_file ${PARAMS_FILE}
