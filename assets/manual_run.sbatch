@@ -28,6 +28,7 @@ RUN_ROOT=${SCRATCH_ROOT}/${SLURM_JOB_ID}
 
 # --- Command ---
 docker run --rm \
+    -v /data/test/574/input/dbsnp/:/data/test/574/input/dbsnp/ \
     -v /persistent/diagnostic/reference/g1k_v37/:/persistent/diagnostic/reference/g1k_v37/:ro \
     -v /persistent/Eirini_Data_transfer/test_full_data/:/persistent/Eirini_Data_transfer/test_full_data/ \
     -v /etc/slurm-llnl/:/etc/slurm-llnl/:ro \
@@ -46,4 +47,4 @@ docker run --rm \
     -r ${PIPELINE_REVISION} \
     -params-file ${PARAMS_FILE} \
     --outdir ${OUTPUT_FOLDER} \
-    --input ${INPUT_INPUT_SAMPLESHEET} 
+    --input ${INPUT_SAMPLESHEET} 
