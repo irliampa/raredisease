@@ -9,9 +9,9 @@ sequence_dictionary        : "/persistent/diagnostic/reference/g1k_v37/human_g1k
 # the input reference genome
 intervals_wgs              : "/persistent/Eirini_Data_transfer/test_full_data/ref_input/human_g1k_v37.interval_list"
 intervals_y                : "/persistent/Eirini_Data_transfer/test_full_data/ref_input/human_g1k_v37_Y.interval_list"
-known_dbsnp                : "/data/test/574/input/dbsnp/dbsnp_138.b37.vcf"
+known_dbsnp                : "/data/test/574/input/dbsnp/dbsnp_138.b37.vcf.gz"
 # TODO: create the TBI for the dbsnp_138.b37, available index type IDX
-known_dbsnp_tbi            : "/data/test/574/input/dbsnp/dbsnp_138.b37.vcf.tbi"
+known_dbsnp_tbi            : "/data/test/574/input/dbsnp/dbsnp_138.b37.vcf.gz.tbi"
 mito_name                  : "MT"
 bait_padding               : 100           #default
 target_bed                 : "/persistent/diagnostic/reference/g1k_v37/kapa-hyper-hp19-capture-targets.bed"
