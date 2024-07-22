@@ -44,6 +44,6 @@ docker run --rm \
     -process.executor=slurm \
     -process.queue='low' \
     -r ${PIPELINE_REVISION} \
+    -params-file ${PARAMS_FILE} \
     --outdir ${OUTPUT_FOLDER} \
-    --input ${INPUT_INPUT_SAMPLESHEETT} \
-    -params_file ${PARAMS_FILE}
+    --input ${INPUT_INPUT_SAMPLESHEET} 
