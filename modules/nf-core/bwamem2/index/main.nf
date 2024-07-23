@@ -1,7 +1,7 @@
 process BWAMEM2_INDEX {
     tag "$fasta"
     // label 'process_single'
-    // label 'process_single'
+    // label 'process_low'
     // label 'process_medium'
     label 'process_high'
 
