@@ -1,7 +1,7 @@
 process BWAMEM2_INDEX {
     tag "$fasta"
     // label 'process_single'
-    label 'process_low'
+    label 'process_medium'
 
     conda "${moduleDir}/environment.yml"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
