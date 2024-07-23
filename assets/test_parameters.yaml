@@ -4,9 +4,10 @@ igenomes_ignore            : true
 fasta                      : "/data/test/574/ref_files_to_compare/HumanG1Kv37/human_g1k_v37.fasta"
 fai                        : "/data/test/574/ref_files_to_compare/HumanG1Kv37/human_g1k_v37.fasta.fai"
 sequence_dictionary        : "/data/test/574/ref_files_to_compare/HumanG1Kv37/human_g1k_v37.dict"
-# bwamem2                    : "/persistent/diagnostic/reference/g1k_v37/"
-# if bwamem2 index directory is not provided, the index files will be automatically created from
+# bwa                        : "/persistent/diagnostic/reference/g1k_v37/"
+# if bwa/bwamem2 index directory is not provided, the index files will be automatically created from
 # the input reference genome
+save_reference             : true
 intervals_wgs              : "/data/test/574/ref_files_to_compare/HumanG1Kv37/human_g1k_v37.interval_list"
 intervals_y                : "/data/test/574/ref_files_to_compare/HumanG1Kv37/human_g1k_v37_Y.interval_list"
 known_dbsnp                : "/data/test/574/input/dbsnp/dbsnp_138.b37.vcf.gz"
