@@ -32,6 +32,7 @@ skip_vep_filter            : true
 
 # Analysis options
 analysis_type              : "wes"
+bwa_as_fallback            : true
 platform                   : "illumina"    #default
 ngsbits_samplegender_method: "xy"          #default
 run_mt_for_wes             : false
@@ -39,7 +40,7 @@ run_rtgvcfeval             : false
 save_mapped_as_cram        : true
 
 # Alignement options
-aligner                    : "bwamem2"
+aligner                    : "bwa"
 # sentieon bwa needs a licence to be implemented
 min_trimmed_length         : 36            #taken from 57-trimmomatic, defaul0
 rmdup                      : true
