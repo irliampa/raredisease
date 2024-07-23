@@ -42,7 +42,7 @@ save_mapped_as_cram        : true
 # Alignement options
 aligner                    : "bwa"
 # sentieon bwa needs a licence to be implemented
-min_trimmed_length         : 36            #taken from 57-trimmomatic, defaul0
+min_trimmed_length         : 36            #taken from 57-trimmomatic, default 40
 rmdup                      : true
 
 # Variant Calling options
