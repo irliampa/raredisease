@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --time 24:00:00
+#SBATCH --time 240:00:00
 #SBATCH --mem=2000M # Should be adjusted based on how much memory you need
 #SBATCH -o /scratch/log/manual-raredisease-%j.log # %j is the slurmjob id
 #SBATCH --account=slurmrunner # We want to run the sbatch scripts as slurmrunner
