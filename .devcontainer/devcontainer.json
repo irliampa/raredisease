@@ -28,12 +28,12 @@
 		"source=${localEnv:SSH_AUTH_SOCK},target=${localEnv:SSH_AUTH_SOCK},type=bind",
 		"source=/data/test/57/raredisease_test/,target=/data/,type=bind,consistency=cached"
 	]
-    ,
+    // ,
     // "features": {
     //     "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
 	// 		"packages": "pig"
 	// 	}
         // ,
 		// "ghcr.io/devcontainers/features/docker-in-docker:2": {}
-	}
+	// }
 }
